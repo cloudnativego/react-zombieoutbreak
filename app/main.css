@@ -1,0 +1,59 @@
+body {
+  background: whitesmoke;
+  font-family: sans-serif;
+}
+
+.outbreaks {
+  margin: 0.5em;
+  padding-left: 0;
+  max-width: 20em;
+  list-style: none;
+}
+
+.outbreak {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  background-color: #fdfdfd;
+  box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.3);
+}
+
+.outbreak:hover {
+  box-shadow: 0 0 0.3em 0.03em rgba(0, 0, 0, 0.7);
+}
+
+.outbreak .delete-outbreak {
+  float: right;
+  padding: 0;
+  background-color: #fdfdfd;
+  margin-top: -7px;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.outbreak .description {
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.outbreak .origin {
+  float: left;
+  font-style: italic;
+  display:inline;
+}
+
+.outbreak .date {
+  float:right;
+  font-weight: lighter;
+  font-size: 10pt;
+  break-after: always;
+  display:inline;
+}
+
+.outbreak .severity {
+  display:block;
+  margin-top: 10px;
+}
+.outbreak:hover .delete-outbreak {
+  visibility: visible;
+}
