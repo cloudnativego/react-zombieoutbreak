@@ -47,6 +47,7 @@ build:
         name: copy files to wercker output
         code: |
           cp -R ./ ${WERCKER_OUTPUT_DIR}
+          cd $WERCKER_OUTPUT_DIR
 
 deploy:
  steps:
