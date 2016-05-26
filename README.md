@@ -1,3 +1,5 @@
+[![wercker status](https://app.wercker.com/status/3a6aa103e41cdd120a30f7775c482449/m "wercker status")](https://app.wercker.com/project/bykey/3a6aa103e41cdd120a30f7775c482449)
+
 # Zombie Outbreak (React)
 
 This sample illustrates how to integrate a front-end heavy application built using React with a Go microservice to host it, as well as how to
