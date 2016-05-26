@@ -3,7 +3,7 @@ box: golang
 build:
   steps:
     - setup-go-workspace:
-        package-dir: github.com/cloudnativego/secureservice
+        package-dir: github.com/cloudnativego/react-zombieoutbreak
 
     - script:
         name: go get
@@ -34,6 +34,16 @@ build:
           npm run build
 
     - script:
+        name: go test
+        code: |
+          go test ./server -v -race
+
+    - script:
+        name: go build
+        code: |
+          go build
+
+    - script:
         name: copy files to wercker output
         code: |
           cp -R ./ ${WERCKER_OUTPUT_DIR}
@@ -43,8 +53,8 @@ deploy:
    - internal/docker-push:
        username: $USERNAME
        password: $PASSWORD
-       cmd: /pipeline/source/main
+       cmd: /pipeline/source/react-zombieoutbreak
        port: "8080"
        tag: latest
-       repository: cloudnativego/secureserver
+       repository: cloudnativego/react-zombieoutbreak
        registry: https://registry.hub.docker.com
