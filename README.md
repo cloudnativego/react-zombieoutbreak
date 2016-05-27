@@ -13,3 +13,14 @@ To run:
 To create a pre-generated `bundle.js` file to prep the application for publication in the cloud:
 
 `npm run build`
+
+To create the go server that hosts the React application:
+
+* `glide install`
+* `go build`
+
+Finally, if you just want to run this right from the Dockerhub image without doing any builds:
+
+```
+docker run -p 8100:8100 -e WEBROOT=/pipeline/source cloudnativego/react-zombieoutbreak
+```
